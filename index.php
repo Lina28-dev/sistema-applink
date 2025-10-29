@@ -112,30 +112,24 @@ $result = $conn -> query ($sql);
 
 <!--banner start-->
 <div class="banner">
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-    
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
         <div class="banner-text">
           <p class="bt1">Sistema de Gestión de Ventas</p>
           <p class="bt2"><span class="bt3">App</span>Link</p>
           <p class="bt4">Administra tu inventario, ventas y clientes de manera eficiente con nuestra plataforma integral.<br>
-        Optimiza tu negocio, controla tus pedidos y haz crecer tus ventas con AppLink.</p>
-        <div class="row">  
+            Optimiza tu negocio, controla tus pedidos y haz crecer tus ventas con AppLink.</p>
+          <div class="row"></div>
+          <div class="col-md-4 d-flex align-items-center justify-content-center">
+            <a href="Clothing.php" class="btn btn-lg" style="background:#e91e63;color:#fff;font-weight:600;">Comenzar Ahora</a>
+          </div>
         </div>
-        <div class="col-md-4 d-flex align-items-center justify-content-center">
-        <a href="#" class="btn btn-lg" style="background:#e91e63;color:#fff;font-weight:600;">Comenzar Ahora</a>
+      </div>
+      <div class="col-md-6 d-flex align-items-center justify-content-center">
+        <img src="img/fondo.jpg" class="img-fluid" alt="Gestión de ventas" style="max-width: 90%; border: 3px solid #ff6600; border-radius: 12px; background: #fff;">
       </div>
     </div>
-  </div>
-</section>
-    
-  <div class="col-md-6">
-    
-      <img src="" class="img-fluid">
- 
-  </div>
-
   </div>
 </div>
 </div>
@@ -182,7 +176,7 @@ $result = $conn -> query ($sql);
                 <input type="hidden" name="product_name" value="<?php echo $row['name']; ?>">
                 <input type="hidden" name="product_price" value="<?php echo $row['Price']; ?>">              
               </div>
-              <input type="submit" class="btn btn btn-primary" value="add to cart" name="add_to_cart">
+              <input type="submit" class="btn btn btn-primary" value="Añadir al carrito" name="add_to_cart">
               </div>
               
             </div>

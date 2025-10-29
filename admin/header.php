@@ -51,11 +51,13 @@ $result = $conn -> query ($sql);
 			<li class="nav-item">
 				<a class="nav-link u" href="users.php">Usuarios</a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link u" href="report.php">Reporte</a>
-			</li>
-		</ul>
-		<a href="logout.php" class="logout-btn">Cerrar Sesión</a>
+			   <li class="nav-item">
+					<a class="nav-link u" href="report.php">Reporte</a>
+				</li>
+				<li class="nav-item">
+					<a href="logout.php" class="nav-link logout-btn">Cerrar Sesión</a>
+				</li>
+			</ul>
 	</div>
 	<?php
 
