@@ -47,76 +47,94 @@ include "lib/connection.php";
 
 
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>cse411</title>
-
-
+    <title>Iniciar Sesión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #fff 0%, #e91e63 100%);
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+        .login-card {
+            max-width: 430px;
+            margin: 60px auto;
+            border: none;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(233,30,99,0.18);
+            background: #fff;
+        }
+        .login-card .card-header {
+            background: #e91e63;
+            color: #fff;
+            border-radius: 18px 18px 0 0;
+            text-align: center;
+            border-bottom: none;
+        }
+        .login-card .card-header h3 {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .login-card .card-body {
+            padding: 2rem 2rem 1.5rem 2rem;
+        }
+        .login-card .form-control {
+            border-radius: 8px;
+            border: 1px solid #e91e63;
+            font-size: 1rem;
+        }
+        .login-card .form-control:focus {
+            border-color: #111;
+            box-shadow: 0 0 0 2px #e91e6333;
+        }
+        .login-card .btn-primary {
+            background: #e91e63;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: background 0.2s;
+        }
+        .login-card .btn-primary:hover {
+            background: #111;
+            color: #fff;
+        }
+        .login-card .input-group {
+            margin-bottom: 1.2rem;
+        }
+    </style>
 </head>
-
-<body class="bg-gradient-primary">
-
-    <div class="container">
-
-        <!-- Outer Row -->
-      <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <div class="row justify-content-center">
-
-            <div class="col-xl-10 col-lg-12 col-md-9">
-
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
-                                    </div>
-                                    <form class="user">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                name="email"
-                                                placeholder="Enter Email Address">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password" name="password">
-                                        </div>
-                                        <div class="form-group">
-                                            
-                                        </div>
-                                 
-                                            <input class="btn btn-primary btn-user btn-block" type="submit" name="submit" value="login">
-                                  
-                                        <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="register.php">Create an Account!</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
+<body>
+<div class="container">
+    <div class="login-card card">
+        <div class="card-header">
+            <h3>Iniciar Sesión</h3>
         </div>
-
-      </form>
-
+        <div class="card-body">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                <div class="input-group form-group">
+                    <input type="email" class="form-control" placeholder="Correo electrónico" name="email" required>
+                </div>
+                <div class="input-group form-group">
+                    <input type="password" class="form-control" placeholder="Contraseña" name="password" required>
+                </div>
+                <div class="form-group d-grid mb-2">
+                    <input type="submit" value="Iniciar Sesión" class="btn btn-primary" name="submit">
+                </div>
+                <div class="text-center mb-2">
+                    <a href="reset_password.php" style="color:#e91e63; font-weight:500; text-decoration:none;">¿Olvidaste tu contraseña?</a>
+                </div>
+                <div class="text-center">
+                    <a href="register.php" style="color:#111; text-decoration:none;">¿No tienes cuenta? Regístrate</a>
+                </div>
+            </form>
+        </div>
     </div>
-
-
+</div>
 </body>
-
 </html>
