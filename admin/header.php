@@ -33,7 +33,7 @@ $result = $conn -> query ($sql);
 	<div class="sidenav" id="sidenav" style="position:fixed;">
 		<ul class="navbar-nav" style="padding-bottom:60px;">
 		   <li class="nav-item">
-				<a class="nav-link d" href="Home.php">Panel de Control</a>
+				<a class="nav-link d" href="Home.php">Dashboard</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link po" href="pending_orders.php">Estado de la Orden</a>

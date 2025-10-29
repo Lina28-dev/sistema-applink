@@ -158,32 +158,40 @@ if(isset($_GET['remove'])){
 <?php echo "<h style='font-size: 24px;'>Total Amount= $total</h>"; ?>
 </div>
 
-<tbody>
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-
-        <h5>If Cash On delivary Then Put 0 in bkash Field</h5>
-      <div class="input-group form-group">
-      <input type="hidden" name="total" value="<?php echo $total ?>">
-      <input type="hidden" name="user_id" value="<?php echo $_SESSION['userid']; ?>">
-      <input type="hidden" name="user_name" value="<?php echo $_SESSION['username']; ?>">
-        <input type="text" class="form-control" placeholder="Address" name="address">
-       </div>
-       <div class="input-group form-group">
-        <input type="number" class="form-control" placeholder="Phone Number" name="number">
-       </div>
-       <div class="input-group form-group">
-        <input type="number" class="form-control" placeholder="Bkash/Nogod/Rocket Number" name="mobnumber">
-       </div>
-       <div class="input-group form-group">
-        <input type="text" class="form-control" placeholder="Txid" name="txid">
-       </div>
-
-      <div class="form-group">
-      <input type="submit" value="Order Now" name="order_btn">
+<?php if ($result && mysqli_num_rows($result) > 0 && isset($_SESSION['userid']) && isset($_SESSION['username'])): ?>
+  <div class="card mt-4 mb-4" style="max-width: 500px; margin: 0 auto; box-shadow: 0 2px 8px #ccc;">
+    <div class="card-body">
+  <h4 class="card-title text-center mb-3" style="color:#007bff;">🛒 Realizar venta</h4>
+  <p class="text-center" style="font-size:16px;color:#333;">Confirma tus datos y haz clic en el botón para finalizar tu compra.</p>
+      <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <input type="hidden" name="total" value="<?php echo $total ?>">
+        <input type="hidden" name="user_id" value="<?php echo $_SESSION['userid']; ?>">
+        <input type="hidden" name="user_name" value="<?php echo $_SESSION['username']; ?>">
+        <div class="form-group mb-2">
+          <label>Dirección de entrega</label>
+          <input type="text" class="form-control" placeholder="Dirección" name="address" required>
+        </div>
+        <div class="form-group mb-2">
+          <label>Teléfono</label>
+          <input type="number" class="form-control" placeholder="Teléfono" name="number" required>
+        </div>
+        <div class="form-group mb-2">
+          <label>Metodo de pago (Tarjeta Debito/Credito)</label>
+          <input type="text" class="form-control" placeholder="Número de pago electrónico" name="mobnumber" required>
+        </div>
+        <div class="form-group mb-2">
+          <label>Numero nequi</label>
+          <input type="text" class="form-control" placeholder="Escribe tu numero de nequi" name="txid" required>
+        </div>
+        <div class="form-group text-center mt-3">
+          <button type="submit" class="btn btn-warning btn-lg px-5" style="font-size:1.3em;box-shadow:0 2px 8px #ffc107;" name="order_btn">
+            <span style="font-size:1.5em;vertical-align:middle;">✔️</span> Realizar venta
+          </button>
+        </div>
+      </form>
     </div>
-
-    </form>
-      </tbody>
+  </div>
+<?php endif; ?>
 </div>
 
 

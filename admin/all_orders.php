@@ -53,14 +53,14 @@ $result = $conn -> query ($sql);
             while($row = mysqli_fetch_assoc($result)) {
               ?>
     <tr>
-      <td><?php echo $row["nombre"] ?></td>
-      <td><?php echo $row["direccion"] ?></td>
-      <td><?php echo $row["telefono"] ?></td>
-      <td><?php echo $row["numero_de_orden"] ?></td>
-      <td><?php echo $row["unidades"] ?></td>
-      <td><?php echo $row["total_productos"] ?></td>
-      <td><?php echo $row["total_precio"] ?></td>
-      <td><?php echo $row["estado"] ?></td>
+  <td><?php echo $row["name"] ?></td>
+  <td><?php echo $row["address"] ?></td>
+  <td><?php echo $row["phone"] ?></td>
+  <td><?php echo $row["txid"] ?></td>
+  <td><?php echo $row["mobnumber"] ?></td>
+  <td><?php echo $row["totalproduct"] ?></td>
+  <td><?php echo $row["totalprice"] ?></td>
+  <td><?php echo $row["status"] ?></td>
     </tr>
     <?php 
     }
