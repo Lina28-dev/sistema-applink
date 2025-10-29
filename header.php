@@ -43,7 +43,7 @@ if (isset($_SESSION['userid']) && !empty($_SESSION['userid'])) {
       
         <div class="row">
           <div class="col-md-12 text-center">
-            <a href=""><img src="img/logo.png"></a>
+            <a href=""><img src="img/logo.jpg" alt="AppLink Logo" style="max-height:90px; width:auto;"></a>
           </div>
         </div>
     
