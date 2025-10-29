@@ -151,8 +151,8 @@ $result = $conn -> query ($sql);
       <div class="row">
         <div class="col-md-12 text-center">
           <img src="img/mark.png">
-          <h4>All Products</h4>
-          <p>A passage of Lorem Ipsum you need here</p>
+          <h4>Conoce tu proximo outfit!</h4>
+          <p>Un pasaje a un mundo de moda y estilo.</p>
 
         </div>
         
@@ -276,7 +276,7 @@ $result = $conn -> query ($sql);
 
       </div>
       <div class="col-md-12 col-lg-6 col-sm-12">
-        <img src="img/comment.png" class="img-fluid">
+        <img src="img/banner-pic.png" class="img-fluid">
       </div>
     </div>
   </div>

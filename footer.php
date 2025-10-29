@@ -4,46 +4,38 @@
 <!---footer start--->
 
 <br>
+
 <div class="footer">
   <div class="container">
     <div class="row">
       <div class="col-lg-4 text-center">
-        <img src="img/logo.png" class="footer-img">
-        <p>Lorem ipsum dolor sit amet <br>
-       consectetur adipiscing elit.<br>
-       Lorem ipsum dolor sit amet</p>
-        <img src="img/social.png">
-        
+        <img src="img/logo.jpg" class="footer-img" style="max-width:120px; margin-bottom:10px;">
+        <p>AppLink es tu sistema integral para la gestión de ventas, inventario y clientes. Optimiza tu negocio, controla tus pedidos y haz crecer tus ventas desde una sola plataforma.</p>
+        <img src="img/social.png" alt="Redes sociales">
       </div>
       <span id="footer-line"></span>
       <div class="col-lg-3 text-center">
-        
-        <h5 class="footer-header">my account</h5>
-        <p>Lorem ipsum<br>
-        Lorem ipsum<br>
-        Lorem ipsum<br>
-        Lorem ipsum<br>
-        Lorem ipsum<br>
-        Lorem ipsum<br>
-        Lorem ipsum</p>
-        
+        <h5 class="footer-header">Enlaces útiles</h5>
+        <p>
+          <a href="index.php">Inicio</a><br>
+          <a href="profile.php">Mi Perfil</a><br>
+          <a href="report.php">Reportes</a><br>
+          <a href="contacto.php">Contacto</a><br>
+          <a href="login.php">Acceso</a><br>
+          <a href="register.php">Registro</a>
+        </p>
       </div>
-       <span  id="footer-line"></span>
+      <span id="footer-line"></span>
       <div class="col-lg-4 text-center">
-
-       <h5 class="footer-header">Shop</h5>
-
-      <p>Lorem ipsum<br>
-      Lorem ipsum<br>
-      Lorem ipsum<br>
-      Lorem ipsum<br>
-      Lorem ipsum<br>
-      Lorem ipsum</p>
-        
-        
+        <h5 class="footer-header">Soporte y Contacto</h5>
+        <p>
+          Email: <a href="mailto:soporte@applink.com">soporte@applink.com</a><br>
+          Tel: +57 300 000 0000<br>
+          Horario: Lun-Vie 8:00-18:00<br>
+          <a href="contacto.php">Formulario de contacto</a>
+        </p>
+        <p>Síguenos en redes sociales para novedades y soporte.</p>
       </div>
-
-      
     </div>
   </div>
 </div>
@@ -68,9 +60,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
-        <p>Site Map  Search Terms  Advanced Search Orders and Returns  Contact Us</p>
-        <p>© 2022 FashionStore. All Rights Reserved.</p>
-        <img src="img/pay.png" class="img-fluid">
+  <p>© 2025 AppLink. Todos los derechos reservados. | Plataforma de gestión de ventas e inventario.</p>
+  <img src="img/pay.png" class="img-fluid" alt="Métodos de pago">
       </div>
     </div>
   </div>

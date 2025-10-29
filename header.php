@@ -65,13 +65,13 @@ if (isset($_SESSION['userid']) && !empty($_SESSION['userid'])) {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.php">Home</a>
+          <a class="nav-link" href="index.php">inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Clothing.php"> Clothing</a>
+          <a class="nav-link" href="Clothing.php"> Ropa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Trends.php">Trends</a>
+          <a class="nav-link" href="Trends.php">Tendencias</a>
         </li>
       </ul>
       <form class="form-inline"  action="search(1).php" method="post">
@@ -88,16 +88,16 @@ if(isset($_SESSION['auth']))
    if($_SESSION['auth']==1)
    {
     echo $_SESSION['username']; ?>
-    <a href="profile.php">(My Orders)</a>
-    <a href="logout.php">(logout)</a>
+    <a href="profile.php">Mi Carrito!</a>
+    <a href="logout.php">Cerrar sesion</a>
 <?php
    }
 }
 else
 {
 ?>
-  <a href="login.php">Login</a>
-  <a href="Register.php">Signup</a>
+  <a href="login.php">Iniciar Sesión</a>
+  <a href="Register.php">Registrarse</a>
 <?php
 }
 ?>
