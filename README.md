@@ -6,8 +6,8 @@
 4. Open PHPMyAdmin (http://localhost/phpmyadmin)
 5. Create a database with name cse411project
 6. Import cse411project.sql file(given inside the zip package in SQL file folder)
-7. Run the script http://localhost/sistema-applink/E-Commerce  (frontend)
-8. For admin panel http://localhost/sistema-applink/E-Commerce/admin  (admin panel)
+7. Run the script http://localhost/sistema-applink/  (frontend)
+8. For admin panel http://localhost/sistema-applink//admin  (admin panel)
 
 <br>
 <a href="https://www.buymeacoffee.com/ashiquranik"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=ashiquranik&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a>
@@ -120,6 +120,60 @@ the page.
 <br>
 ![sales report](https://user-images.githubusercontent.com/38730778/212703299-6dd270c1-7afc-4915-8cbf-df9bdc47d3b0.png)
 *Sales Report*
+
+
+---
+
+## Documentación Técnica
+
+### 1. Estructura de Carpetas y Archivos
+- `/admin/`: Panel de administración (productos, pedidos, usuarios)
+- `/css/`, `/js/`, `/img/`: Recursos estáticos
+- `/lib/connection.php`: Conexión a la base de datos
+- `index.php`: Página principal
+- `login.php`, `register.php`, `reset_password.php`: Autenticación de usuarios
+
+### 2. Descripción de la Base de Datos
+**products**: id, name, price, imgname, stock, etc.
+**orders**: id, userid, productid, quantity, status, date, etc.
+**users**: id, username, password, email, role, etc.
+Puedes consultar el archivo `base de datos/cse411project.sql` para la estructura completa.
+
+### 3. Tecnologías Utilizadas
+- PHP 7+
+- MySQL/MariaDB
+- Bootstrap 4/5
+- JavaScript (Chart.js para gráficas)
+- HTML5, CSS3 (Poppins, colores de marca)
+
+### 4. Seguridad y Buenas Prácticas
+- Uso de sesiones para autenticación
+- Sentencias preparadas para SQL (evitar inyección)
+- Validación y sanitización de datos de usuario
+- Manejo de errores y mensajes amigables
+
+### 5. Personalización y Extensión
+- Puedes cambiar colores, logo y fuentes en los archivos de CSS y en el header
+- Para agregar módulos, crea nuevos archivos PHP y enlázalos desde el panel
+- Los roles y permisos se gestionan en la tabla `users` y en la lógica de sesión
+
+### 6. Ejemplo de Consulta SQL Segura
+```php
+$stmt = $conn->prepare('SELECT * FROM products WHERE id = ?');
+$stmt->bind_param('i', $id);
+$stmt->execute();
+```
+
+### 7. Pruebas y Validación
+- Prueba el login, registro, agregar productos, realizar pedidos y el dashboard
+- Verifica el modo oscuro y la persistencia de preferencias
+- Revisa la seguridad de formularios y subida de archivos
+
+### 8. Mantenimiento y Actualización
+- Actualiza dependencias de Bootstrap y Chart.js según sea necesario
+- Para migraciones de base de datos, usa copias de seguridad y revisa el SQL
+
+---
 
 
 
