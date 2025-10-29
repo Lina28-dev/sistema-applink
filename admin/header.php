@@ -23,7 +23,7 @@ $result = $conn -> query ($sql);
 </head>
 <body>
 	<div style="width:260px;height:100px;position:fixed;top:0;left:0;background:white;z-index:200;display:flex;align-items:center;justify-content:center;">
-		<img src="img/logo.png" alt="Applink Logo" class="fixed-logo" style="height:60px; width:auto;">
+		<img src="img/" alt="Applink Logo" class="fixed-logo" style="height:60px; width:auto;">
 	</div>
 	<section class="header" id="header">
 		<i class="fas fa-bars fixed" onclick="openside()"></i>
