@@ -1,19 +1,23 @@
- <?php
- include'header.php';
+
+<?php
+SESSION_START();
+include'header.php';
 
 if(isset($_SESSION['auth']))
 {
    if($_SESSION['auth']!=1)
    {
        header("location:login.php");
+       exit;
    }
 }
 else
 {
    header("location:login.php");
+   exit;
 }
 include'lib/connection.php';
-$sql = "SELECT * FROM orders where status='delivered'";
+$sql = "SELECT * FROM orders WHERE status='Delivered'";
 $result = $conn -> query ($sql);
 ?>
 <!DOCTYPE html>
@@ -24,26 +28,24 @@ $result = $conn -> query ($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/pending_orders.css">
+</head>
+<body>
 
-<?php
- include'header.php';
- SESSION_START();
-
-if(isset($_SESSION['auth']))
-{
-  if($_SESSION['auth']!=1)
-  {
-     header("location:login.php");
-  }
-}
-else
-{
-  header("location:login.php");
-}
-include'lib/connection.php';
-$sql = "SELECT * FROM orders where status='delivered'";
-$result = $conn -> query ($sql);
-?>
+<div class="container pendingbody">
+  <h5>Delivered Orders</h5>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Send Money Number</th>
+      <th scope="col">Txid</th>
+      <th scope="col">Total Product</th>
+      <th scope="col">Total Price</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
   <tbody>
   <?php
           if (mysqli_num_rows($result) > 0) {
@@ -51,7 +53,6 @@ $result = $conn -> query ($sql);
             while($row = mysqli_fetch_assoc($result)) {
               ?>
     <tr>
-
       <td><?php echo $row["name"] ?></td>
       <td><?php echo $row["address"] ?></td>
       <td><?php echo $row["phone"] ?></td>
