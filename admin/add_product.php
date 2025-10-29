@@ -51,7 +51,7 @@ if (isset($_POST['submit']))
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+  <div class="main-content container">
       <?php echo $result;?>
         <h4>Agregar Producto</h4>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">

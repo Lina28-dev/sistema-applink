@@ -27,7 +27,7 @@ include'lib/connection.php';
 </head>
 <body>
     
-    <div class="container homebody">
+    <div class="main-content container homebody">
         <div class="row">
             <div class="col-md-12">
                 <h1>Bienvenida al Panel de Administración Lina!</h1>
@@ -36,7 +36,7 @@ include'lib/connection.php';
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-12 col-md-3">
                 <div class="card text-white bg-primary mb-3">
                     <div class="card-header">Órdenes Totales</div>
                     <div class="card-body">
@@ -49,7 +49,7 @@ include'lib/connection.php';
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-12 col-md-3">
                 <div class="card text-white bg-warning mb-3">
                     <div class="card-header">Órdenes Pendientes</div>
                     <div class="card-body">
@@ -62,7 +62,7 @@ include'lib/connection.php';
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-12 col-md-3">
                 <div class="card text-white bg-success mb-3">
                     <div class="card-header">Órdenes Entregadas</div>
                     <div class="card-body">
@@ -75,7 +75,7 @@ include'lib/connection.php';
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-12 col-md-3">
                 <div class="card text-white bg-danger mb-3">
                     <div class="card-header">Órdenes Canceladas</div>
                     <div class="card-body">
@@ -90,7 +90,7 @@ include'lib/connection.php';
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-12 col-md-4">
                 <div class="card border-info mb-3">
                     <div class="card-header">Total de Productos</div>
                     <div class="card-body text-info">
@@ -103,7 +103,7 @@ include'lib/connection.php';
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-12 col-md-4">
                 <div class="card border-secondary mb-3">
                     <div class="card-header">Usuarios Registrados</div>
                     <div class="card-body text-secondary">
@@ -116,7 +116,7 @@ include'lib/connection.php';
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-12 col-md-4">
                 <div class="card border-warning mb-3">
                     <div class="card-header">Productos con Bajo Stock (&lt;=5)</div>
                     <div class="card-body text-warning">

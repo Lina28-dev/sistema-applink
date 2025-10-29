@@ -48,7 +48,7 @@ else
 </head>
 <body>
 
-<div class="container pendingbody">
+<div class="main-content container pendingbody">
   <h5>Todos los productos</h5>
 <table class="table">
   <thead>

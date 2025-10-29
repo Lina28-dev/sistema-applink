@@ -1,51 +1,145 @@
+/*
+ * 1. PRÁCTICA RECOMENDADA: box-sizing
+ * Esto asegura que el padding y el border se incluyan dentro del ancho y alto
+ * de un elemento, previniendo el desbordamiento horizontal en la mayoría de los casos.
+*/
+* {
+    box-sizing: border-box;
+}
+
+/*
+ * 2. CORRECCIÓN PRINCIPAL: Resetear los márgenes del cuerpo
+ * Elimina el margen predeterminado de 8px que añade el navegador, 
+ * que es una causa común del espacio extra/scroll horizontal.
+*/
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Oculta cualquier desbordamiento accidental a la derecha */
+}
+
 body {
-  background-color: #f9f9f9;
+    background-color: #f9f9f9;
 }
 .header {
-  width: 100%;
-  height: 100px;
-  background-color: white;
-  transition: 0.3s;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0;
+    margin-left: 260px;
 }
 .sidenav {
-  height: 100%;
-  width: 0px;
-  background-color: #0e1a35;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  overflow: hidden;
-  transition: 0.3s;
+    height: calc(100vh - 100px);
+    width: 260px;
+    background-color: #0e1a35;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 100px;
+    overflow-y: auto;
+    transition: width 0.3s;
+}
+.sidenav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 .sidenav ul li {
-  padding-top: 10px;
-  padding-left: 30px;
-  font-size: 20px;
+    padding: 10px 24px 10px 24px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.logout-btn {
+    display: block;
+    width: 100%;
+    padding: 12px 24px;
+    color: #fff;
+    background: #1a2947;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #22345a;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+.logout-btn:hover {
+    background: #ff3b3b;
+    color: #fff;
 }
 .sidenav ul li a {
-  color: white;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+.sidenav ul li:hover,
+.sidenav ul li.active {
+    background: #1a2947;
+    color: #ff3b3b;
 }
 .fixed {
-  padding: 30px;
-  /*padding-left: 300px;*/
-  font-size: 25px;
+    padding: 30px;
+    font-size: 25px;
+    margin-left: 0;
 }
 i {
-  cursor: pointer;
-  margin-right: 10px;
+    cursor: pointer;
+    margin-right: 10px;
 }
 p {
-  transition: 0.3s;
+    transition: 0.3s;
 }
 .line-fixed {
-  display: inline;
-  padding-left: 10px;
-  font-weight: 700;
-  font-size: 25px !important;
+    display: inline;
+    padding-left: 10px;
+    font-weight: 700;
+    font-size: 25px !important;
+    margin-left: 0;
+}
+@media (min-width: 992px) {
+    .main-content {
+        margin-left: 260px;
+        /* El padding es top, right, bottom, left. El valor para 'right' ya es 0 */
+        padding: 30px 0 20px 20px; 
+    }
+    .header {
+        margin-left: 260px;
+        padding-left: 0;
+    }
+}
+a.main-content {
+    margin-left: 260px;
+    padding: 30px 20px 20px 20px;
+}
+
+@media (max-width: 991.98px) {
+    .sidenav {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        z-index: 100;
+    }
+    .fixed, .line-fixed {
+        margin-left: 0;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
 }
 .fixed-logo {
-  width: 55px;
+    width: 55px;
 }
 a.nav-link:hover {
-  color: yellow;
+    color: yellow;
 }

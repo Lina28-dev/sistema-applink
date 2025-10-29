@@ -41,7 +41,7 @@ if(isset($_POST['update_update_btn'])){
     </head>
     <body>
 
-    <div class="container pendingbody">
+  <div class="main-content container pendingbody">
       <h5>Estado de la orden</h5>
     <table class="table">
       <thead>

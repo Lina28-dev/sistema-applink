@@ -28,7 +28,7 @@ if (isset($_POST['submit']))
   $result = $conn -> query ($sql);
 }
 ?>
-<div class="container">
+<div class="main-content container">
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
   <label for="starttime">Fecha de inicio (fecha y hora):</label>
   <input type="datetime-local" id="starttime" name="starttime">

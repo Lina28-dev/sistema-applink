@@ -31,7 +31,7 @@ $result = $conn -> query ($sql);
 </head>
 <body>
 
-<div class="container pendingbody">
+<div class="main-content container pendingbody">
   <h5>Todos los Usuarios</h5>
 <table class="table">
   <thead>

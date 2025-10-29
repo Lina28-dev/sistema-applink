@@ -22,29 +22,16 @@ $result = $conn -> query ($sql);
 	<link rel="stylesheet" href="css/media.css">
 </head>
 <body>
+	<div style="width:260px;height:100px;position:fixed;top:0;left:0;background:white;z-index:200;display:flex;align-items:center;justify-content:center;">
+		<img src="img/logo.png" alt="Applink Logo" class="fixed-logo" style="height:60px; width:auto;">
+	</div>
 	<section class="header" id="header">
 		<i class="fas fa-bars fixed" onclick="openside()"></i>
 		<div class="line-fixed">Panel de Control</div>
-		<?php
-		$c=0;
-          if (mysqli_num_rows($result) > 0) {
-            // output data of each row
-            while($row = mysqli_fetch_assoc($result)) {
-				$c=$c+1;
-			}
-		}
-              ?>
-		<span>Nueva Orden</span>
-		<span style="    border-radius: 20px;
-    
-    background-color: red;
-    color: white;
-    padding: 5px;"><?php echo $c ;?></span>
-		<a href="logout.php">Cerrar Sesión</a>
 	</section>
 
-	<div class="sidenav" id="sidenav">
-		<ul class="navbar-nav">
+	<div class="sidenav" id="sidenav" style="position:fixed;">
+		<ul class="navbar-nav" style="padding-bottom:60px;">
 		   <li class="nav-item">
 				<a class="nav-link d" href="Home.php">Panel de Control</a>
 			</li>
@@ -68,6 +55,7 @@ $result = $conn -> query ($sql);
 				<a class="nav-link u" href="report.php">Reporte</a>
 			</li>
 		</ul>
+		<a href="logout.php" class="logout-btn">Cerrar Sesión</a>
 	</div>
 	<?php
 
