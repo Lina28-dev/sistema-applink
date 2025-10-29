@@ -49,17 +49,17 @@ else
 <body>
 
 <div class="container pendingbody">
-  <h5>All Product</h5>
+  <h5>Todos los productos</h5>
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">Image</th>
-      <th scope="col">Name</th>
-      <th scope="col">Catagory</th>
+      <th scope="col">Imagen</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Categoría</th>
 
-      <th scope="col">Quantity</th>
-      <th scope="col">Price</th>
-      <th scope="col">Action</th>
+      <th scope="col">Unidades</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Acción</th>
     </tr>
   </thead>
   <tbody>
@@ -77,9 +77,9 @@ else
 
         <td><input type="number" name="update_quantity"  value="<?php echo $row['quantity']; ?>" ></td>
         <td> <input type="number" name="update_Price" value="<?php echo $row['Price']; ?>" ></td>
-        <td> <input type="submit" value="update" name="update_update_btn">
+        <td> <input type="submit" value="Actualizar" name="update_update_btn">
       </form></td>
-      <td><a href="all_product.php?remove=<?php echo $row['id']; ?>">remove</a></td>
+      <td><a href="all_product.php?remove=<?php echo $row['id']; ?>">Eliminar</a></td>
     </tr>
     <?php 
     }

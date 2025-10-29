@@ -53,33 +53,33 @@ if (isset($_POST['submit']))
 <body>
     <div class="container">
       <?php echo $result;?>
-        <h4>Add Product</h4>
+        <h4>Agregar Producto</h4>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
   <div class="mb-3">
-    <label for="exampleInputName" class="form-label">Product Name</label>
+    <label for="exampleInputName" class="form-label">Nombre del Producto</label>
     <input type="text" name="name" class="form-control" id="exampleInputName">
   </div>
   <div class="mb-3">
-    <label for="exampleInputType" class="form-label">Catagory</label>
+    <label for="exampleInputType" class="form-label">Categoría</label>
     <input type="text" name="catagory"  class="form-control" id="exampleInputType">
   </div>
   <div class="mb-3">
-    <label for="exampleInputDescription" class="form-label">Description</label>
+    <label for="exampleInputDescription" class="form-label">Descripción</label>
     <input type="text" name="description" class="form-control" id="exampleInputDescription">
   </div>
   <div class="mb-3">
-    <label for="exampleInputQuantity" class="form-label">Quantity</label>
+    <label for="exampleInputQuantity" class="form-label">Unidades</label>
     <input type="number" name="quantity" class="form-control" id="exampleInputQuantity">
   </div>
   <div class="mb-3">
-    <label for="exampleInputPrice" class="form-label">Price</label>
+    <label for="exampleInputPrice" class="form-label">Precio</label>
     <input type="Number" name="price" class="form-control" id="exampleInputPrice">
   </div>
   <div class="mb-3">
-        <label for="uploadfile" class="form-label">Image</label>
+        <label for="uploadfile" class="form-label">Imagen</label>
         <input type="file" name="uploadfile" />
     </div>
-  <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" name="submit" class="btn btn-primary">Enviar</button>
 </form>
     </div>
 </body>
