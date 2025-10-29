@@ -69,7 +69,7 @@ else
             while($row = mysqli_fetch_assoc($result)) {
               ?>
     <tr>
-      <td><img src="product_img/<?php echo $row['imgname']; ?>" style="width:50px;"></td>
+  <td><img src="../img/<?php echo $row['imgname']; ?>" style="width:50px;"></td>
      <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <input type="hidden" name="update_id"  value="<?php echo  $row['id']; ?>" >
         <td><input type="text" name="update_name"  value="<?php echo $row['name']; ?>" ></td>
