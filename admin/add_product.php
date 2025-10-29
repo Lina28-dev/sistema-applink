@@ -17,28 +17,31 @@ else
  $result=null;
 if (isset($_POST['submit'])) 
 {
-    $name=$_POST['name'];
-    $catagory=$_POST['catagory'];
-    $description=$_POST['description'];
-    $quantity=$_POST['quantity'];
-    $price=$_POST['price'];
+  $name = trim($_POST['name']);
+  $catagory = trim($_POST['catagory']);
+  $description = trim($_POST['description']);
+  $quantity = intval($_POST['quantity']);
+  // Limpiar el precio para dejar solo números
+  $price = $_POST['price'];
+  $price = preg_replace('/[^0-9]/', '', $price);
+  if ($price === '' || $price == 0) {
+    $result = '<div style="color:red;">Alerta: El precio es obligatorio.</div>';
+  } else {
     $filename = $_FILES["uploadfile"]["name"];
-
-
-    $insertSql = "INSERT INTO product(name, catagory, description, quantity, price, imgname) VALUES ('$name', '$catagory', '$description',$quantity, $price, '$filename')";
-
-    if ($conn -> query ($insertSql)) 
-    {
-        $result="<h2>*******Data insert success*******</h2>";
-        $tempname = $_FILES["uploadfile"]["tmp_name"];   
-        $folder = "product_img/".$filename;
-
+    if ($filename === '') {
+      $result = '<div style="color:red;">Error: Debes seleccionar una imagen.</div>';
+    } else {
+      $insertSql = "INSERT INTO product(name, catagory, description, quantity, price, imgname) VALUES ('$name', '$catagory', '$description', $quantity, $price, '$filename')";
+      if ($conn->query($insertSql)) {
+        $result = "<h2>*******Data insert success*******</h2>";
+        $tempname = $_FILES["uploadfile"]["tmp_name"];
+        $folder = "../img/" . $filename;
         move_uploaded_file($tempname, $folder);
+      } else {
+        $result = '<div style="color:red;">Error SQL: ' . $conn->error . '</div>';
+      }
     }
-    else
-    {
-     die($conn -> error);
- }
+  }
 
 } 
 ?>

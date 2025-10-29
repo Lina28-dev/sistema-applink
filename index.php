@@ -122,7 +122,7 @@ $result = $conn -> query ($sql);
             Optimiza tu negocio, controla tus pedidos y haz crecer tus ventas con AppLink.</p>
           <div class="row"></div>
           <div class="col-md-4 d-flex align-items-center justify-content-center">
-            <a href="Clothing.php" class="btn btn-lg" style="background:#e91e63;color:#fff;font-weight:600;">Comenzar Ahora</a>
+            <a href="contacto.php" class="btn btn-lg" style="background:#e91e63;color:#fff;font-weight:600;">Comenzar Ahora</a>
           </div>
         </div>
       </div>
