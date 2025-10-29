@@ -42,19 +42,19 @@ if(isset($_POST['update_update_btn'])){
     <body>
 
     <div class="container pendingbody">
-      <h5>Order Status</h5>
+      <h5>Estado de la orden</h5>
     <table class="table">
       <thead>
         <tr>
 
-          <th scope="col">Name</th>
-          <th scope="col">Address</th>
-          <th scope="col">Phone</th>
-          <th scope="col">Send Money Number</th>
-          <th scope="col">Txid</th>
-          <th scope="col">Total Product</th>
-          <th scope="col">Total Price</th>
-          <th scope="col">Status</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Dirección</th>
+          <th scope="col">Teléfono</th>
+          <th scope="col">Número de Orden</th>
+          <th scope="col">Unidades</th>
+          <th scope="col">Total de Productos</th>
+          <th scope="col">Precio Total</th>
+          <th scope="col">Estado</th>
         </tr>
       </thead>
       <tbody>
@@ -66,27 +66,27 @@ if(isset($_POST['update_update_btn'])){
                   ?>
         <tr>
 
-          <td><?php echo $row["name"] ?></td>
-          <td><?php echo $row["address"] ?></td>
-          <td><?php echo $row["phone"] ?></td>
-          <td><?php echo $row["mobnumber"] ?></td>
-          <td><?php echo $row["txid"] ?></td>
-          <td><?php echo $row["totalproduct"] ?></td>
-          <td><?php echo $row["totalprice"] ?></td>
+          <td><?php echo $row["nombre"] ?></td>
+          <td><?php echo $row["direccion"] ?></td>
+          <td><?php echo $row["telefono"] ?></td>
+          <td><?php echo $row["numero_de_orden"] ?></td>
+          <td><?php echo $row["unidades"] ?></td>
+          <td><?php echo $row["total_productos"] ?></td>
+          <td><?php echo $row["total_precio"] ?></td>
           <td><form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <input type="hidden" name="update_id"  value="<?php echo  $row['id']; ?>" >
             <div>
                                     <select name="update_status" class="form-control">
                                     <option><?php echo $row['status']; ?></option>
-                                        <option value="Pending">Pending</option>
-                                        <option value="Confirmed">Confirmed</option>
-                                      <option value="Cancel">Cancel</option>
-                                      <option value="Delivered">Delivered</option>
+                                        <option value="Pending">Pendiente</option>
+                                        <option value="Confirmed">Confirmado</option>
+                                      <option value="Cancel">Cancelar</option>
+                                      <option value="Delivered">Entregado</option>
                                     </select>
                                 </div>
-            <input type="submit" value="update" name="update_update_btn">
+            <input type="submit" value="Actualizar" name="update_update_btn">
           </form></td>
-          <td><a href="pending_orders.php?remove=<?php echo $row['id']; ?>">remove</a></td>
+          <td><a href="pending_orders.php?remove=<?php echo $row['id']; ?>">Eliminar</a></td>
         </tr>
         <?php 
         }

@@ -30,7 +30,7 @@ include'lib/connection.php';
     <div class="container homebody">
         <div class="row">
             <div class="col-md-12">
-                <h1>Welcome To The Admin Panel</h1>
+                <h1>Bienvenida al Panel de Administración Lina!</h1>
                 
 
             </div>

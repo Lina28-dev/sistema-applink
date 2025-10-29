@@ -46,7 +46,7 @@ include "lib/connection.php";
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin</title>
+    <title>Inicio de Sesión</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -57,19 +57,19 @@ include "lib/connection.php";
     <div class="d-flex justify-content-center">
         <div class="card">
             <div class="card-header">
-                <h3>Sign In</h3>
+                <h3>Iniciar Sesión</h3>
             </div>
             <div class="card-body">
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <div class="input-group form-group">
-                        <input type="text" class="form-control" placeholder="username" name="email">
-                        
+                        <input type="text" class="form-control" placeholder="usuario" name="email">
+
                     </div>
                     <div class="input-group form-group">
-                        <input type="password" class="form-control" placeholder="password" name="password">
+                        <input type="password" class="form-control" placeholder="contraseña" name="password">
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Login" class="btn btn-primary" name="submit">
+                        <input type="submit" value="Iniciar Sesión" class="btn btn-primary" name="submit">
                     </div>
                 </form>
             </div>

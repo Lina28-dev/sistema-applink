@@ -24,7 +24,7 @@ $result = $conn -> query ($sql);
 <body>
 	<section class="header" id="header">
 		<i class="fas fa-bars fixed" onclick="openside()"></i>
-		<div class="line-fixed">Admin Panel</div>
+		<div class="line-fixed">Panel de Control</div>
 		<?php
 		$c=0;
           if (mysqli_num_rows($result) > 0) {
@@ -34,39 +34,39 @@ $result = $conn -> query ($sql);
 			}
 		}
               ?>
-		<span>(New Orders)</span>
+		<span>Nueva Orden</span>
 		<span style="    border-radius: 20px;
     
     background-color: red;
     color: white;
     padding: 5px;"><?php echo $c ;?></span>
-		<a href="logout.php">(logout)</a>
+		<a href="logout.php">Cerrar Sesión</a>
 	</section>
 
 	<div class="sidenav" id="sidenav">
 		<ul class="navbar-nav">
 		   <li class="nav-item">
-				<a class="nav-link d" href="Home.php">Dashboard</a>
-			</li>
-            <li class="nav-item">
-				<a class="nav-link po" href="pending_orders.php">Order Status</a>
+				<a class="nav-link d" href="Home.php">Panel de Control</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link ap" href="add_product.php">Add Product</a>
+				<a class="nav-link po" href="pending_orders.php">Estado de la Orden</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link vp" href="all_product.php">All Product</a>
+				<a class="nav-link ap" href="add_product.php">Agregar Producto</a>
 			</li>
-			
 			<li class="nav-item">
-				<a class="nav-link ao" href="all_orders.php">Delivered Order</a>
+				<a class="nav-link vp" href="all_product.php">Todos los Productos</a>
 			</li>
-            <li class="nav-item">
-                <a class="nav-link u" href="users.php">Users</a>
-            </li>
+    
 			<li class="nav-item">
-                <a class="nav-link u" href="report.php">Report</a>
-            </li>
+				<a class="nav-link ao" href="all_orders.php">Órdenes Entregadas</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link u" href="users.php">Usuarios</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link u" href="report.php">Reporte</a>
+			</li>
 		</ul>
 	</div>
 	<?php
