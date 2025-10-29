@@ -46,8 +46,8 @@ if (isset($_POST['submit']))
       <th scope="col">Nombre</th>
       <th scope="col">Dirección</th>
       <th scope="col">Teléfono</th>
-      <th scope="col">Número de Envío</th>
       <th scope="col">Unidades</th>
+      <th scope="col">Numero de telefono</th>
       <th scope="col">Total de Productos</th>
       <th scope="col">Precio Total</th>
       <th scope="col">Estado</th>
