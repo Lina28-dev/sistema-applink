@@ -31,7 +31,59 @@ if (isset($_SESSION['userid']) && !empty($_SESSION['userid'])) {
     <link rel="favicon" type="text/css" href="#favicon">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
-
+    <style>
+      header, .header-top, .navbar, .navbar-light, .navbar-nav .nav-link, .line {
+        transition: background 0.3s, color 0.3s;
+      }
+      /* Títulos en modo claro */
+      header .header-top .col-md-12.text-center h1,
+      header .header-top .col-md-12.text-center h2,
+      header .header-top .col-md-12.text-center h3,
+      header .header-top .col-md-12.text-center h4,
+      header .header-top .col-md-12.text-center h5,
+      header .header-top .col-md-12.text-center h6,
+      .navbar-nav .nav-link,
+      .line {
+        color: #222 !important;
+      }
+      body.dark-mode header,
+      body.dark-mode .header-top,
+      body.dark-mode .navbar,
+      body.dark-mode .navbar-light,
+      body.dark-mode .line {
+        background: #232323 !important;
+        color: #fff !important;
+      }
+      body.dark-mode .navbar-nav .nav-link {
+        color: #fff !important;
+      }
+      body.dark-mode .navbar-nav .nav-link.active, 
+      body.dark-mode .navbar-nav .nav-link:focus, 
+      body.dark-mode .navbar-nav .nav-link:hover {
+        color: #e91e63 !important;
+      }
+      body.dark-mode .form-control {
+        background: #181818 !important;
+        color: #fff !important;
+        border-color: #e91e63;
+      }
+      body.dark-mode .form-control:focus {
+        background: #232323 !important;
+        color: #fff !important;
+        border-color: #e91e63;
+        box-shadow: 0 0 0 2px #e91e6333;
+      }
+      body.dark-mode .btn-outline-dark {
+        background: #e91e63 !important;
+        color: #fff !important;
+        border-color: #e91e63 !important;
+      }
+      body.dark-mode .btn-outline-dark:hover {
+        background: #fff !important;
+        color: #e91e63 !important;
+        border-color: #e91e63 !important;
+      }
+    </style>
 </head>
 
 <body>

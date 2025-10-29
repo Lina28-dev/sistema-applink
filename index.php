@@ -2,6 +2,55 @@
     <!-- Google Fonts: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+      .dark-mode {
+        background: #181818 !important;
+        color: #fff !important;
+      }
+      .dark-mode .card, .dark-mode .feature-block, .dark-mode .feature-card, .dark-mode .main-content, .dark-mode .container, .dark-mode .welcome, .dark-mode .banner, .dark-mode .logo5, .dark-mode section {
+        background: #232323 !important;
+        color: #fff !important;
+      }
+      .dark-mode .btn-fucsia, .dark-mode .btn.btn-fucsia {
+        background: #e91e63;
+        color: #fff;
+      }
+      .dark-mode .btn-fucsia:hover {
+        background: #ad1457;
+      }
+      .dark-toggle-btn {
+        position: fixed;
+        top: 18px;
+        right: 18px;
+        z-index: 9999;
+        background: #e91e63;
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        padding: 10px 22px;
+        font-weight: 700;
+        font-family: 'Poppins', Arial, sans-serif;
+        box-shadow: 0 2px 8px #e91e6322;
+        transition: background 0.2s, color 0.2s;
+      }
+      .dark-toggle-btn:hover {
+        background: #111;
+        color: #fff;
+      }
+</style>
+<button class="dark-toggle-btn" id="darkModeToggle">Modo Oscuro</button>
+<script>
+  // Al cargar, aplicar preferencia guardada
+  if (localStorage.getItem('applink-darkmode') === 'true') {
+    document.body.classList.add('dark-mode');
+    document.getElementById('darkModeToggle').textContent = 'Modo Claro';
+  }
+  document.getElementById('darkModeToggle').onclick = function() {
+    const isDark = document.body.classList.toggle('dark-mode');
+    localStorage.setItem('applink-darkmode', isDark);
+    this.textContent = isDark ? 'Modo Claro' : 'Modo Oscuro';
+  };
+</script>
+<style>
       body {
         font-family: 'Poppins', Arial, sans-serif;
         background: #fff;
