@@ -32,18 +32,18 @@ $result = $conn -> query ($sql);
 <body>
 
 <div class="container pendingbody">
-  <h5>Delivered Orders</h5>
+  <h5>Ordenes Entregadas</h5>
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Address</th>
-      <th scope="col">Phone</th>
-      <th scope="col">Send Money Number</th>
-      <th scope="col">Txid</th>
-      <th scope="col">Total Product</th>
-      <th scope="col">Total Price</th>
-      <th scope="col">Status</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Dirección</th>
+      <th scope="col">Teléfono</th>
+      <th scope="col">Numero de Orden</th>
+      <th scope="col">Unidades</th>
+      <th scope="col">Total Productos</th>
+      <th scope="col">Total Precio</th>
+      <th scope="col">Estado</th>
     </tr>
   </thead>
   <tbody>
@@ -53,20 +53,20 @@ $result = $conn -> query ($sql);
             while($row = mysqli_fetch_assoc($result)) {
               ?>
     <tr>
-      <td><?php echo $row["name"] ?></td>
-      <td><?php echo $row["address"] ?></td>
-      <td><?php echo $row["phone"] ?></td>
-      <td><?php echo $row["mobnumber"] ?></td>
-      <td><?php echo $row["txid"] ?></td>
-      <td><?php echo $row["totalproduct"] ?></td>
-      <td><?php echo $row["totalprice"] ?></td>
-      <td><?php echo $row["status"] ?></td>
+      <td><?php echo $row["nombre"] ?></td>
+      <td><?php echo $row["direccion"] ?></td>
+      <td><?php echo $row["telefono"] ?></td>
+      <td><?php echo $row["numero_de_orden"] ?></td>
+      <td><?php echo $row["unidades"] ?></td>
+      <td><?php echo $row["total_productos"] ?></td>
+      <td><?php echo $row["total_precio"] ?></td>
+      <td><?php echo $row["estado"] ?></td>
     </tr>
     <?php 
     }
         } 
         else 
-            echo "0 results";
+            echo "0 resultados";
         ?>
   </tbody>
 </table>

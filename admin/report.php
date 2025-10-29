@@ -30,27 +30,27 @@ if (isset($_POST['submit']))
 ?>
 <div class="container">
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-  <label for="starttime">Start (date and time):</label>
+  <label for="starttime">Fecha de inicio (fecha y hora):</label>
   <input type="datetime-local" id="starttime" name="starttime">
 
-  <label for="endtime"> End (date and time):</label>
+  <label for="endtime">Fecha de fin (fecha y hora):</label>
   <input type="datetime-local" id="endtime" name="endtime">
   <input type="submit" name="submit">
 </form>
 <div class="container pendingbody">
-  <h5>All Orders</h5>
+  <h5>Todos los Pedidos</h5>
 <table class="table">
   <thead>
     <tr>
 
-      <th scope="col">Name</th>
-      <th scope="col">Address</th>
-      <th scope="col">Phone</th>
-      <th scope="col">Send Money Number</th>
-      <th scope="col">Txid</th>
-      <th scope="col">Total Product</th>
-      <th scope="col">Total Price</th>
-      <th scope="col">Status</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Dirección</th>
+      <th scope="col">Teléfono</th>
+      <th scope="col">Número de Envío</th>
+      <th scope="col">Unidades</th>
+      <th scope="col">Total de Productos</th>
+      <th scope="col">Precio Total</th>
+      <th scope="col">Estado</th>
     </tr>
   </thead>
   <tbody>
@@ -82,7 +82,7 @@ if (isset($_POST['submit']))
 
         } 
         else 
-            echo "0 results";
+            echo "0 resultados";
         ?>
   </tbody>
 </table>

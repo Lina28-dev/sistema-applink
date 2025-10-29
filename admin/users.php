@@ -1,21 +1,23 @@
 <?php
-
+SESSION_START();
 if(isset($_SESSION['auth']))
 {
-   if($_SESSION['auth']!=1)
-   {
-       header("location:login.php");
-   }
+  if($_SESSION['auth']!=1)
+  {
+     header("location:login.php");
+     exit;
+  }
 }
 else
 {
-   header("location:login.php");
+  header("location:login.php");
+  exit;
 }
- include'header.php';
- include'lib/connection.php';
+include'header.php';
+include'lib/connection.php';
 
- $sql = "SELECT * FROM users";
- $result = $conn -> query ($sql);
+$sql = "SELECT * FROM users";
+$result = $conn -> query ($sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,13 +32,13 @@ else
 <body>
 
 <div class="container pendingbody">
-  <h5>All Users</h5>
+  <h5>Todos los Usuarios</h5>
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">Id</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
+      <th scope="col">cc</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
       <th scope="col">Email</th>
     </tr>
   </thead>
